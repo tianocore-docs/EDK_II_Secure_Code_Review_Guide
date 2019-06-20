@@ -1,0 +1,10 @@
+{
+  "variables" : {
+    "draft"   : "yes",
+    "title"   : "EDK II Secure Code Review Guide",
+    "version" : "Revision 01.0"
+  },
+
+  "plugins": ["puml"],
+  "pluginsConfig": {}
+}
