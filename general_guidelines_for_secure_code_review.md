@@ -30,7 +30,7 @@
 -->
 # General Guidelines for Secure Code Review {#general-guidelines-for-secure-code-review}
 
-**Overview**
+## **Overview**{#overview}
 
 Secure Code Review is a special activity compared to a normal code review. While the typical code review is focused on software quality, including usability, reusability, and maintainability, secure code reviews are focused on software security aspects, including but not limited to confidentiality, integrity, and availability (C.I.A.).
 
@@ -88,6 +88,6 @@ Other than #2.iv and #2.v above, all other rules apply to EDK II firmware.
 
 Besides “A Process for Performing Security Code Reviews.”, Ransome provided some good suggestions in the book “Core Software Security: Security at the Source” on how to perform the SDL activity including security code review.
 
-#### EDK II Secure Coding Guidelines {#edk-ii-secure-coding-guidelines}
+## EDK II Secure Coding Guidelines {#edk-ii-secure-coding-guidelines}
 
 We also provided the guideline for EDK II Secure Coding. People need to fully understand the EDK II secure coding best practices before doing the security code review.

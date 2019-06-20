@@ -45,3 +45,5 @@
   * [Other](code_review_guidelines_for_boot_firmware/other.md)
   * [Summary](code_review_guidelines_for_boot_firmware/summary.md)
 * [References](references.md)
+  * [Books and Papers ](references.md#books-and-papers)
+  * [Web](references.md#web)
