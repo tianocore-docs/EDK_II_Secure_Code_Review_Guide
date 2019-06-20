@@ -31,7 +31,7 @@
 
 # References {#references}
 
-#### Books and Papers {#books-and-papers}
+## Books and Papers {#books-and-papers}
 
 [Cohen] _Best Kept Secrets of Peer Code Review_, [Jason Cohen](https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&text=Jason+Cohen&search-alias=books&field-author=Jason+Cohen&sort=relevancerank), Smart Bear Inc., 2006, ISBN: 978-1599160672
 
@@ -45,7 +45,7 @@
 
 [Wiegers] _Peer Reviews in Software: A Practical Guide_, [Karl Wiegers](https://www.amazon.com/Karl-Wiegers/e/B001IGNXQS/ref=dp_byline_cont_book_1), Addison-Wesley Professional, 2001, ISBN: 978-0201734850
 
-#### Web {#web}
+## Web {#web}
 
 [CodeProject] Code review guidelines, https://www.codeproject.com/articles/524235/codeplusreviewplusguidelines
 
