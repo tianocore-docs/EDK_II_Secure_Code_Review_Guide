@@ -1,0 +1,674 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>External Input · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="race_condition.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    EDK II Secure Code Review Guide 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../executive_summary.html">
+            
+                <a href="../executive_summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../general_guidelines_for_secure_code_review.html">
+            
+                <a href="../general_guidelines_for_secure_code_review.html">
+            
+                    
+                    General Guidelines for Secure Code Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Code Review Guidelines for Boot Firmware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="external_input.html">
+            
+                <a href="external_input.html">
+            
+                    
+                    External Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="race_condition.html">
+            
+                <a href="race_condition.html">
+            
+                    
+                    Race Condition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="hardware_input.html">
+            
+                <a href="hardware_input.html">
+            
+                    
+                    Hardware Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="secret_handling.html">
+            
+                <a href="secret_handling.html">
+            
+                    
+                    Secret Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="register_lock.html">
+            
+                <a href="register_lock.html">
+            
+                    
+                    Register Lock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="secure_configuration.html">
+            
+                <a href="secure_configuration.html">
+            
+                    
+                    Secure Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="replayrollback.html">
+            
+                <a href="replayrollback.html">
+            
+                    
+                    Replay/Rollback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="cryptography.html">
+            
+                <a href="cryptography.html">
+            
+                    
+                    Cryptography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="other.html">
+            
+                <a href="other.html">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../references.html">
+            
+                <a href="../references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../references.html">
+            
+                <a href="../references.html#books-and-papers">
+            
+                    
+                    Books and Papers 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../references.html">
+            
+                <a href="../references.html#web">
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >External Input</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Code Review Guide</div>
+        <div style="text-align:right">Revision 01.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                 <!--- @file
+  external-input.md for EDK II Secure Code Review Guide
+
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="external-input">External Input </h2>
+<p>External input describes data that can be controlled by an attacker. Examples include:</p>
+<ul>
+<li>UEFI capsule image</li>
+<li>Boot logo in Bitmap (BMP) or Joint Photographic Experts Group (JPEG) format</li>
+<li>Contents of file system partitions</li>
+<li>Read/write variables</li>
+<li>System Management Mode (SMM) communication buffer</li>
+<li>Network packets</li>
+</ul>
+<p><strong>Previous Vulnerabilities:</strong></p>
+<h3 id="boot-logo-image">Boot Logo Image </h3>
+<p><a href="https://www.blackhat.com/presentations/bh-usa-09/WOJTCZUK/BHUSA09-Wojtczuk-AtkIntelBios-SLIDES.pdf" target="_blank">At BlackHat 2009</a>, Invisible Things Lab demonstrated how to use a buffer overflow in BMP file processing to construct an attack and flash a new firmware. The BMP file is an external input where an attacker may input a large value for <code>PixelWidth</code> and <code>PixelHeight</code>. This causes <code>BltBufferSize</code> to overflow and results in a very small number. This is a typical integer overflow caused by multiplication.</p>
+<pre><code>EFI_STATUS ConvertBmpToGopBlt ()
+{
+ /// ...
+  if (BmpHeader-&gt;CharB != &apos;B&apos; || BmpHeader-&gt;CharM != &apos;M&apos;) {
+    return EFI_UNSUPPORTED;
+  }
+  BltBufferSize = BmpHeader-&gt;PixelWidth * BmpHeader-&gt;PixelHeight
+                    * sizeof (EFI_GRAPHICS_OUTPUT_BLT_PIXEL);
+  IsAllocated = FALSE;
+  if (*GopBlt == NULL) {
+    *GopBltSize = BltBufferSize;
+    *GopBlt = EfiLibAllocatePool (*GopBltSize);
+</code></pre><p>To handle these cases, code should check for integer overflow using division, as shown below:</p>
+<pre><code>if (BmpHeader-&amp;gt;PixelWidth &amp;gt; MAX_UINT / sizeof 
+(EFI_GRAPHICS_OUTPUT_BLT_PIXEL) / BmpHeader-&amp;gt;PixelHeight) {
+    return EFI_INVALID_PARAMETER;
+
+}
+</code></pre><h3 id="smm-callout">SMM Callout </h3>
+<p>At <a href="https://www.blackhat.com/presentations/bh-dc-09/Wojtczuk_Rutkowska/BlackHat-DC-09-Rutkowska-Attacking-Intel-TXT-slides.pdf" target="_blank">Black Hat DC 2009</a>, Invisible Things Lab demonstrated a way to inject code into SMM. The SMM code referenced (<code>ACPINV</code> below) a function pointer in Advanced Configuration and Power Interface (ACPI) Non-Volatile Storage (NVS) memory and invoked this function address. An attacker may modify the function pointer address in ACPI NVS so it points to a malicious function.</p>
+<pre><code>mov [ACPINV+x], %rax
+call *0x18(%rax)
+</code></pre><p>A similar issue is also found in <a href="http://blog.cr4.sh/2016/06/exploring-and-exploiting-lenovo.html" target="_blank">ThinkPad 2016</a>. The <code>SmmRuntimeCallHandle</code> is the pointer in ACPI Reserved memory. As such, the attacker may replace this function pointer with any address. </p>
+<p>This is shown in line with the statement:  <code>RtServices = (EFI_SMM_RT_CALLBACK_SERVICES *) SmmRtStruct-&gt;PrivateData.SmmRuntimeCallHandle;</code> below.</p>
+<pre><code>EFI_STATUS
+EFIAPI
+SmmRuntimeManagementCallback (
+  IN EFI_HANDLE             SmmImageHandle,
+  IN OUT VOID               *CommunicationBuffer,
+  IN OUT UINTN              *SourceSize
+  )
+{
+  SMM_RUNTIME_COMMUNICATION_STRUCTURE *SmmRtStruct;
+  EFI_SMM_RT_CALLBACK_SERVICES        *RtServices;
+
+  RtServices  = NULL;
+
+  SmmRtStruct = (SMM_RUNTIME_COMMUNICATION_STRUCTURE *) CommunicationBuffer;
+  RtServices  = (EFI_SMM_RT_CALLBACK_SERVICES *) SmmRtStruct-&gt;PrivateData.SmmRuntimeCallHandle;
+
+  if (RtServices != NULL) {
+    RtServices-&gt;CallbackFunction (RtServices-&gt;Context, mSmst, (VOID *) &amp;SmmRtStruct-&gt;PrivateData);
+    SmmRtStruct-&gt;PrivateData.SmmRuntimeCallHandle = NULL;
+  }
+
+  return EFI_SUCCESS;
+}
+</code></pre><p>It is critical that SMM never reference memory outside System Management RAM (SMRAM) for function pointers.</p>
+<p>In the latest Intel processors, the SMM_Code_Access_Chk feature can be used to block code execution outside of the value set by the SMRAM Range Register (SMRR). This feature MUST be enabled if it is supported.</p>
+<p>The latest versions of EDK II also enable Executable Disable (XD) for memory addresses outside of SMRAM.</p>
+<h3 id="smm-communication">SMM Communication </h3>
+<p>In <a href="http://www.c7zero.info/stuff/ANewClassOfVulnInSMIHandlers_csw2015.pdf" target="_blank">CanSecWest 2015</a>, a new class of SMM attack was disclosed. The attacker may construct a SMM 
+communication buffer that points to memory owned by System Management RAM (SMRAM) or Virtual Machine Monitor (VMM), then pass this address into a System Management Interrupt 
+(SMI) handler. This causes the SMI handler to perform the write for the attacker. This typically classified as a &#x201C;confused deputy&#x201D; attack. See the lines with <code>CommBuffer</code> 
+and with the  <code>CopyMem</code> statement below.</p>
+<pre><code>SmmVariableHandler ()
+//  ...
+  SmmVariableFunctionHeader = (SMM_VARIABLE_COMMUNICATE_HEADER *)CommBuffer;
+  switch (SmmVariableFunctionHeader-&gt;Function) {
+  case SMM_VARIABLE_FUNCTION_GET_VARIABLE:
+    SmmVariableHeader = (SMM_VARIABLE_COMMUNICATE_ACCESS_VARIABLE *)
+    SmmVariableFunctionHeader-&gt;Data;
+    Status = VariableServiceGetVariable (
+               ...
+               (UINT8 *)SmmVariableHeader-&gt;Name + SmmVariableHeader-&gt;NameSize
+               );
+}
+
+VariableServiceGetVariable (
+  // ...
+  OUT VOID *Data
+  )
+{
+ // ...
+  CopyMem (Data, GetVariableDataPtr (Variable.CurrPtr), VarDataSize);
+}
+</code></pre><p>To mitigate this attack, the SMI handler is required to use the library service <code>SmmIsBufferOutsideSmmValid()</code> to check the communication buffer before accessing it.</p>
+<p>ACPI table for Authenticated Code Module (ACM) is a signed binary module delivered by Intel. It is used to construct a dynamic root of trust for measurement (DRTM) 
+environment. In 2011, Invisible Things Lab disclosed <a href="https://invisiblethingslab.com/resources/2011/Attacking_Intel_TXT_via_SINIT_hijacking.pdf" target="_blank">a way to hijack the SINIT ACM</a>. 
+The issue happens when the ACM code parses the untrusted ACPI DMA Remapping (DMAR) table. The DMAR table is used before validation of the address. As such the attacker may 
+control the copied memory length and override the Intel Trusted Executable Technology (TXT) heap and SINIT ACM itself. See line <code>6741</code> below.</p>
+<pre><code>6675: mov  (%edi),%esi
+6677: cmpl $0x52414d44,(%esi)
+; (DWORD*)esi == &#x2019;DMAR&#x2019;?
+
+667d: je 0x6697
+...
+6697: mov  (%edi),%edi
+6699: mov  %edi,%es:0xa57
+; var_a57 = &amp;dmar
+
+66a0: mov  0x4(%edi),%ecx
+; ecx = dmar.len
+
+66a3: push %ecx
+66a4: add  %edi,%ecx
+66a6: mov  %ecx,%es:0xa5b
+; var_a5b = &amp;dmar + dmar.len
+
+...
+6701: mov  %es:0xa47,%edi
+; edi = var_a47 (memory on the TXT heap)
+
+6708: mov  (%edi),%eax
+670a: mov  %es:0xa5b,%ebx
+; ebx = &amp;dmar + dmar.len
+
+6711: sub %es:0xa57,%ebx
+; ebx = dmar.len
+
+...
+6738: mov %es:0xa57,%esi
+; var_a57 = &amp;dmar
+
+673f: mov %ebx, %ecx
+6741: rep movsb %ds:(%esi),%es:(%edi)
+; memcpy (var_a47, dmar, dmar.len)
+</code></pre><p>Adding a check for the length field of untrusted data source is mandatory.</p>
+<h3 id="capsule-image">Capsule Image </h3>
+<p>Most UEFI firmware supports capsule based firmware update. In 2014, MITRE demonstrated how to use <a href="https://www.mitre.org/sites/default/files/publications/14-2221-extreme-escalation-presentation.pdf" target="_blank">a vulnerability in the capsule coalesce process</a> to attack the firmware update process.</p>
+<p>This is another example of an integer overflow. <strong>NOTE</strong>: <code>MemorySize if</code> statement and <code>Size +=</code> below.</p>
+<pre><code>EFI_STATUS
+EFIAPI
+CapsuleDataCoalesce (
+  IN EFI_PEI_SERVICES                **PeiServices,
+  IN EFI_PHYSICAL_ADDRESS            *BlockListBuffer,
+  IN MEMORY_RESOURCE_DESCRIPTOR      *MemoryResource,
+  IN OUT VOID                        **MemoryBase,
+  IN OUT UINTN                       *MemorySize
+  )
+{
+  //...
+    if (*MemorySize &lt;= (CapsuleSize + DescriptorsSize)) {
+      return EFI_BUFFER_TOO_SMALL;
+  }
+  //...
+}
+
+EFI_STATUS
+GetCapsuleInfo (
+  IN EFI_CAPSULE_BLOCK_DESCRIPTOR   *Desc,
+  IN OUT UINTN                      *NumDescriptors OPTIONAL,
+  IN OUT UINTN                      *CapsuleSize OPTIONAL,
+  IN OUT UINTN                      *CapsuleNumber OPTIONAL
+  )
+{
+//  ...
+    } else {
+      Size += (UINTN) Desc-&gt;Length;
+      Count++;
+  ...
+}
+</code></pre><p>Before the code performs the addition, the code must use subtraction to check if the addition will cause an integer overflow.</p>
+<h3 id="read-write-variable">Read/Write Variable </h3>
+<p>A read/write variable is another potential attack surface because it is easily controlled by an attacker. In <a href="https://cansecwest.com/slides/2014/AllYourBoot_csw14-mitre-final.pdf" target="_blank">CanSecWest 2014</a>, MITRE demonstrated how to modify the &#x201C;Setup&#x201D; variable to bypass UEFI secure boot ImageVerificationPolicy.</p>
+<p>The attack taught us that it is a bad idea to embed security policy in a read/write &#x201C;Setup&#x201D; variable.</p>
+<h3 id="s3-boot-script">S3 Boot Script </h3>
+<p>The S3 Boot Script is used to restore the register settings during the ACPI S3 resume process. In <a href="https://cansecwest.com/slides/2015/AttacksOnUEFI_Rafal.pptx" target="_blank">CanSecWest 2015</a>, Invisible Things Lab found some firmware implementations did not protect the S3 script or the dispatch function code, so it remained in an OS-accessible ACPI memory region. This allowed an attacker to inject malicious boot script content to bypass the silicon lock register setting in the S3 Boot Script.<br>See the use of <code>EntryFunc</code>  and <code>EntryPoint</code> below.</p>
+<pre><code>BootScriptExecuteDispatch (IN UINT8 *Script)
+{
+   ...
+   EntryFunc = (DISPATCH_ENTRYPOINT_FUNC) (UINTN) (ScriptDispatch.EntryPoint);
+   Status = EntryFunc (NULL, NULL);
+}
+</code></pre><p>As a mitigation, the lockbox should be used to protect data used in the S3 resume phase.</p>
+<h3 id="network-for-amt">Network for AMT </h3>
+<p><a href="https://www.intel.com/content/www/us/en/architecture-and-technology/intel-active-management-technology.html" target="_blank">Intel&#xAE; Active Management Technology</a> (Intel&#xAE; AMT) is a remote management feature in the Intel vPRO platform. In 2017, Embed disclosed <a href="https://www.blackhat.com/docs/us-17/thursday/us-17-Evdokimov-Intel-AMT-Stealth-Breakthrough.pdf" target="_blank">an issue with Intel AMT</a> where providing an empty response will cause password verification to succeed as if the attacker provided the admin password. 
+See the use of <code>strncmp</code> and <code>response.length</code> below.</p>
+<pre><code>/* NETSTACK_CODE:20431FC8 */
+
+if(strncmp(computed_response, response.value, response.length))
+{
+   goto error;
+}
+return 0;
+</code></pre><p>To avoid similar issues, network packet processing code should always be carefully reviewed.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Code Review Guide</div>
+        <div style="text-align:right">Revision 01.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Code Review Guidelines for Boot Firmware">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="race_condition.html" class="navigation navigation-next " aria-label="Next page: Race Condition">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"External Input","level":"1.4.1","depth":2,"next":{"title":"Race Condition","level":"1.4.2","depth":2,"path":"code_review_guidelines_for_boot_firmware/race_condition.md","ref":"code_review_guidelines_for_boot_firmware/race_condition.md","articles":[]},"previous":{"title":"Code Review Guidelines for Boot Firmware","level":"1.4","depth":1,"path":"code_review_guidelines_for_boot_firmware/README.md","ref":"code_review_guidelines_for_boot_firmware/README.md","articles":[{"title":"External Input","level":"1.4.1","depth":2,"path":"code_review_guidelines_for_boot_firmware/external_input.md","ref":"code_review_guidelines_for_boot_firmware/external_input.md","articles":[]},{"title":"Race Condition","level":"1.4.2","depth":2,"path":"code_review_guidelines_for_boot_firmware/race_condition.md","ref":"code_review_guidelines_for_boot_firmware/race_condition.md","articles":[]},{"title":"Hardware Input","level":"1.4.3","depth":2,"path":"code_review_guidelines_for_boot_firmware/hardware_input.md","ref":"code_review_guidelines_for_boot_firmware/hardware_input.md","articles":[]},{"title":"Secret Handling","level":"1.4.4","depth":2,"path":"code_review_guidelines_for_boot_firmware/secret_handling.md","ref":"code_review_guidelines_for_boot_firmware/secret_handling.md","articles":[]},{"title":"Register Lock","level":"1.4.5","depth":2,"path":"code_review_guidelines_for_boot_firmware/register_lock.md","ref":"code_review_guidelines_for_boot_firmware/register_lock.md","articles":[]},{"title":"Secure Configuration","level":"1.4.6","depth":2,"path":"code_review_guidelines_for_boot_firmware/secure_configuration.md","ref":"code_review_guidelines_for_boot_firmware/secure_configuration.md","articles":[]},{"title":"Replay/Rollback","level":"1.4.7","depth":2,"path":"code_review_guidelines_for_boot_firmware/replayrollback.md","ref":"code_review_guidelines_for_boot_firmware/replayrollback.md","articles":[]},{"title":"Cryptography","level":"1.4.8","depth":2,"path":"code_review_guidelines_for_boot_firmware/cryptography.md","ref":"code_review_guidelines_for_boot_firmware/cryptography.md","articles":[]},{"title":"Other","level":"1.4.9","depth":2,"path":"code_review_guidelines_for_boot_firmware/other.md","ref":"code_review_guidelines_for_boot_firmware/other.md","articles":[]},{"title":"Summary","level":"1.4.10","depth":2,"path":"code_review_guidelines_for_boot_firmware/summary.md","ref":"code_review_guidelines_for_boot_firmware/summary.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Secure Code Review Guide","version":"Revision 01.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code_review_guidelines_for_boot_firmware/external_input.md","mtime":"2020-12-01T06:54:07.709Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T06:54:41.063Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

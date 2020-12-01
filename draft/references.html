@@ -1,0 +1,539 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>References · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="references.html" />
+    
+    
+    <link rel="prev" href="code_review_guidelines_for_boot_firmware/summary.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    EDK II Secure Code Review Guide 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="executive_summary.html">
+            
+                <a href="executive_summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="general_guidelines_for_secure_code_review.html">
+            
+                <a href="general_guidelines_for_secure_code_review.html">
+            
+                    
+                    General Guidelines for Secure Code Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="code_review_guidelines_for_boot_firmware/">
+            
+                <a href="code_review_guidelines_for_boot_firmware/">
+            
+                    
+                    Code Review Guidelines for Boot Firmware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="code_review_guidelines_for_boot_firmware/external_input.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/external_input.html">
+            
+                    
+                    External Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="code_review_guidelines_for_boot_firmware/race_condition.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/race_condition.html">
+            
+                    
+                    Race Condition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="code_review_guidelines_for_boot_firmware/hardware_input.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/hardware_input.html">
+            
+                    
+                    Hardware Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="code_review_guidelines_for_boot_firmware/secret_handling.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/secret_handling.html">
+            
+                    
+                    Secret Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="code_review_guidelines_for_boot_firmware/register_lock.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/register_lock.html">
+            
+                    
+                    Register Lock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="code_review_guidelines_for_boot_firmware/secure_configuration.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/secure_configuration.html">
+            
+                    
+                    Secure Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="code_review_guidelines_for_boot_firmware/replayrollback.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/replayrollback.html">
+            
+                    
+                    Replay/Rollback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="code_review_guidelines_for_boot_firmware/cryptography.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/cryptography.html">
+            
+                    
+                    Cryptography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="code_review_guidelines_for_boot_firmware/other.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/other.html">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="code_review_guidelines_for_boot_firmware/summary.html">
+            
+                <a href="code_review_guidelines_for_boot_firmware/summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="references.html">
+            
+                <a href="references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="references.html">
+            
+                <a href="references.html#books-and-papers">
+            
+                    
+                    Books and Papers 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="references.html">
+            
+                <a href="references.html#web">
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >References</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Code Review Guide</div>
+        <div style="text-align:right">Revision 01.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  references.md for EDK II Security Code Review Guide
+
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="references">References </h1>
+<h2 id="books-and-papers">Books and Papers </h2>
+<p>[Cohen] <em>Best Kept Secrets of Peer Code Review</em>, <a href="https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&amp;text=Jason+Cohen&amp;search-alias=books&amp;field-author=Jason+Cohen&amp;sort=relevancerank" target="_blank">Jason Cohen</a>, Smart Bear Inc., 2006, ISBN: 978-1599160672</p>
+<p>[Freedman] <em>Handbook of Walkthroughs, Inspections, and Technical Reviews: Evaluating Programs, Projects, and Products,</em> <a href="https://www.amazon.com/Daniel-P.-Freedman/e/B000APETK2/ref=dp_byline_cont_book_1" target="_blank">Daniel P. Freedman</a> and <a href="https://www.amazon.com/Gerald-M.-Weinberg/e/B000AP8TZ8/ref=dp_byline_cont_book_2" target="_blank">Gerald M. Weinberg</a>, Dorset House, 1990, ISBN: 978-0932633194</p>
+<p>[Gilb] <em>Software Inspection</em>, <a href="https://www.amazon.com/s/ref=dp_byline_sr_book_1?ie=UTF8&amp;text=Tom+Gilb&amp;search-alias=books&amp;field-author=Tom+Gilb&amp;sort=relevancerank" target="_blank">Tom Gilb</a> and <a href="https://www.amazon.com/Dorothy-Graham/e/B005VWBCUO/ref=dp_byline_cont_book_2" target="_blank">Dorothy Graham</a>, Addison-Wesley Professional, 1994, ISBN: 978-0201631814</p>
+<p>[Howard] Howard, M. (2006, July&#x2013;August). &#x201C;A Process for Performing Security Code Reviews.&#x201D; IEEE Security &amp; Privacy, pp. 74&#x2013;79, <a href="https://www.researchgate.net/publication/3437819_A_process_for_performing_security_code_reviews?ev=auth_pub" target="_blank">https://www.researchgate.net/publication/3437819_A_process_for_performing_security_code_reviews?ev=auth_pub</a></p>
+<p>[Ransome] <em>Core Software Security: Security at the Source</em>, James Ransome and Anmol Misra, CRC Press, 2014, ISBN: 978-1466560956.</p>
+<p>[Wiegers] <em>Peer Reviews in Software: A Practical Guide</em>, <a href="https://www.amazon.com/Karl-Wiegers/e/B001IGNXQS/ref=dp_byline_cont_book_1" target="_blank">Karl Wiegers</a>, Addison-Wesley Professional, 2001, ISBN: 978-0201734850</p>
+<h2 id="web">Web </h2>
+<p>[CodeProject] Code review guidelines, <a href="https://www.codeproject.com/articles/524235/codeplusreviewplusguidelines" target="_blank">https://www.codeproject.com/articles/524235/codeplusreviewplusguidelines</a></p>
+<p>[Howard2] Howard, M. (2004, November). &#x201C;Attack Surface: Mitigate Security Risks by Minimizing the Code You Expose to Untrusted Users.&#x201D;, <a href="http://download.microsoft.com/download/3/a/7/3a7fa450-1f33-41f7-9e6d-3aa95b5a6aea/MSDNMagazineNovember2004en-us.chm" target="_blank">http://download.microsoft.com/download/3/a/7/3a7fa450-1f33-41f7-9e6d-3aa95b5a6aea/MSDNMagazineNovember2004en-us.chm</a></p>
+<p>[Howard3] Howard, M. (2003, November). &#x201C;Review It: Expert Tips for Finding Security Defects in Your Code&#x201D;, <a href="http://download.microsoft.com/download/3/a/7/3a7fa450-1f33-41f7-9e6d-3aa95b5a6aea/MSDNMagazineNovember2003en-us.chm" target="_blank">http://download.microsoft.com/download/3/a/7/3a7fa450-1f33-41f7-9e6d-3aa95b5a6aea/MSDNMagazineNovember2003en-us.chm</a></p>
+<p>[Meier] Meier, J., et al. (2005, October). &#x201C;How To: Perform a Security Code Review for Managed Code (.NET Framework 2.0)&#x201D;. <a href="https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff649315(v%3dpandp.10" target="_blank">https://docs.microsoft.com/en-us/previous-versions/msp-n-p/ff649315(v%3dpandp.10</a>)</p>
+<p>[OWASP] OWASP Code Review Guide, <a href="https://www.owasp.org/images/2/2e/OWASP_Code_Review_Guide-V1_1.pdf" target="_blank">https://www.owasp.org/images/2/2e/OWASP_Code_Review_Guide-V1_1.pdf</a></p>
+<h4 id="research-real-world-examples">Research &amp; Real World Examples </h4>
+<p>[Wojtczuk BH 2009] Attack Intel BIOS,<a href="https://www.blackhat.com/presentations/bh-usa-09/WOJTCZUK/BHUSA09-Wojtczuk-AtkIntelBios-SLIDES.pdf" target="_blank">https://www.blackhat.com/presentations/bh-usa-09/WOJTCZUK/BHUSA09-Wojtczuk-AtkIntelBios-SLIDES.pdf</a></p>
+<p>[Rutkowska BH DC 2009] Attack Intel TXT,<a href="https://www.blackhat.com/presentations/bh-dc-09/Wojtczuk_Rutkowska/BlackHat-DC-09-Rutkowska-Attacking-Intel-TXT-slides.pdf" target="_blank">https://www.blackhat.com/presentations/bh-dc-09/Wojtczuk_Rutkowska/BlackHat-DC-09-Rutkowska-Attacking-Intel-TXT-slides.pdf</a></p>
+<p>[Bazhaniuk CSW 2015] A New Class of Vulnerability in SMI handlers, <a href="http://www.c7zero.info/stuff/ANewClassOfVulnInSMIHandlers_csw2015.pdf" target="_blank">http://www.c7zero.info/stuff/ANewClassOfVulnInSMIHandlers_csw2015.pdf</a></p>
+<p>[ThinkPwn 2016] Exploring Lenovo,<a href="http://blog.cr4.sh/2016/06/exploring-and-exploiting-lenovo.html" target="_blank">http://blog.cr4.sh/2016/06/exploring-and-exploiting-lenovo.html</a></p>
+<p>[Wojtczuk 2011] Attacking Intel TXT via SINIT Hijacking, <a href="https://invisiblethingslab.com/resources/2011/Attacking_Intel_TXT_via_SINIT_hijacking.pdf" target="_blank">https://invisiblethingslab.com/resources/2011/Attacking_Intel_TXT_via_SINIT_hijacking.pdf</a></p>
+<p>[Kallenberg 2014] Extreme Privilege Escalation on Windows 8 UEFI System, <a href="https://www.mitre.org/sites/default/files/publications/14-2221-extreme-escalation-presentation.pdf" target="_blank">https://</a><a href="https://www.mitre.org/sites/default/files/publications/14-2221-extreme-escalation-presentation.pdf" target="_blank">www.mitre.org/sites/default/files/publications/14-2221-extreme-escalation-presentation.pdf</a></p>
+<p>[Kallenberg CSW 2014] All your boot are belong to us, <a href="https://cansecwest.com/slides/2014/AllYourBoot_csw14-mitre-final.pdf" target="_blank">https://cansecwest.com/slides/2014/AllYourBoot_csw14-mitre-final.pdf</a></p>
+<p>[Wojtczuk CSW 2015] Attacks on UEFI Security, <a href="https://cansecwest.com/slides/2015/AttacksOnUEFI_Rafal.pptx" target="_blank">https://cansecwest.com/slides/2015/AttacksOnUEFI_Rafal.pptx</a></p>
+<p>[Evdokimov BH 2017] Intel AMT Stealth Breakthrough,<a href="https://www.blackhat.com/docs/us-17/thursday/us-17-Evdokimov-Intel-AMT-Stealth-Breakthrough.pdf" target="_blank">https://</a><a href="https://www.blackhat.com/docs/us-17/thursday/us-17-Evdokimov-Intel-AMT-Stealth-Breakthrough.pdf" target="_blank">www.blackhat.com/docs/us-17/thursday/us-17-Evdokimov-Intel-AMT-Stealth-Breakthrough.pdf</a></p>
+<p>[SpeedRacer 2014] Speed Racer, <a href="https://fahrplan.events.ccc.de/congress/2014/Fahrplan/system/attachments/2565/original/speed_racer_whitepaper.pdf" target="_blank">https://fahrplan.events.ccc.de/congress/2014/Fahrplan/system/attachments/2565/original/speed_racer_whitepaper.pdf</a></p>
+<p>[Rutkowska BH 2008] Preventing and Detecting Xen Hypervisor Subversions, <a href="https://invisiblethingslab.com/resources/bh08/part2-full.pdf" target="_blank">https://</a><a href="https://invisiblethingslab.com/resources/bh08/part2-full.pdf" target="_blank">invisiblethingslab.com/resources/bh08/part2-full.pdf</a></p>
+<p>[Tereshkin BH 2009] A Ring -3 Rootkits,<a href="https://invisiblethingslab.com/resources/bh09usa/Ring%20-3%20Rootkits.pdf" target="_blank">https://</a><a href="https://invisiblethingslab.com/resources/bh09usa/Ring%20-3%20Rootkits.pdf" target="_blank">invisiblethingslab.com/resources/bh09usa/Ring%20-3%20Rootkits.pdf</a></p>
+<p>[Bulygin RC 2017] Baring the system, http<a href="http://www.c7zero.info/stuff/REConBrussels2017_BARing_the_system.pdf" target="_blank">://</a><a href="http://www.c7zero.info/stuff/REConBrussels2017_BARing_the_system.pdf" target="_blank">www.c7zero.info/stuff/REConBrussels2017_BARing_the_system.pdf</a></p>
+<p>[Wojtczuk 2009] Another TXT Attack, <a href="https://invisiblethingslab.com/resources/misc09/Another%20TXT%20Attack.pdf" target="_blank">https://invisiblethingslab.com/resources/misc09/Another%20TXT%20Attack.pdf</a></p>
+<p>[Duflot CSW 2009] SMM Reloaded,<a href="https://cansecwest.com/csw09/csw09-duflot.pdf" target="_blank">https://</a><a href="https://cansecwest.com/csw09/csw09-duflot.pdf" target="_blank">cansecwest.com/csw09/csw09-duflot.pdf</a></p>
+<p>[Sevinsky BH 2013] Funderbolt &#x2013; Adventures in thunderbolt DMA attacks,<a href="https://media.blackhat.com/us-13/US-13-Sevinsky-Funderbolt-Adventures-in-Thunderbolt-DMA-Attacks-Slides.pdf" target="_blank">https://media.blackhat.com/us-13/US-13-Sevinsky-Funderbolt-Adventures-in-Thunderbolt-DMA-Attacks-Slides.pdf</a></p>
+<p>[Pcileech 2017] Attacking UEFI and Linux, <a href="http://blog.frizk.net/2017/01/attacking-uefi-and-linux.html" target="_blank">http://blog.frizk.net/2017/01/attacking-uefi-and-linux.html</a></p>
+<p>[Facedancer 2012] Facedancer, <a href="http://goodfet.sourceforge.net/hardware/facedancer21/" target="_blank">http://goodfet.sourceforge.net/hardware/facedancer21/</a></p>
+<p>[Schumilo BH 2014] Don&#x2019;t trust your USB,<a href="https://www.blackhat.com/docs/eu-14/materials/eu-14-Schumilo-Dont-Trust-Your-USB-How-To-Find-Bugs-In-USB-Device-Drivers.pdf" target="_blank">https://</a><a href="https://www.blackhat.com/docs/eu-14/materials/eu-14-Schumilo-Dont-Trust-Your-USB-How-To-Find-Bugs-In-USB-Device-Drivers.pdf" target="_blank">www.blackhat.com/docs/eu-14/materials/eu-14-Schumilo-Dont-Trust-Your-USB-How-To-Find-Bugs-In-USB-Device-Drivers.pdf</a></p>
+<p>[Boone CSW 2018] TPM Genie, <a href="https://github.com/nccgroup/TPMGenie/blob/master/docs/CanSecWest_2018_-_TPM_Genie_-_Jeremy_Boone.pdf" target="_blank">https://github.com/nccgroup/TPMGenie/blob/master/docs/CanSecWest<em>2018</em>-<em>TPM_Genie</em>-_</a><a href="https://github.com/nccgroup/TPMGenie/blob/master/docs/CanSecWest_2018_-_TPM_Genie_-_Jeremy_Boone.pdf" target="_blank">Jeremy_Boone.pdf</a></p>
+<p>[Brossard DC 2008] Bypassing Pre-boot Authentication Passwords, <a href="https://www.defcon.org/images/defcon-16/dc16-presentations/brossard/defcon-16-brossard-wp.pdf" target="_blank">https://</a><a href="https://www.defcon.org/images/defcon-16/dc16-presentations/brossard/defcon-16-brossard-wp.pdf" target="_blank">www.defcon.org/images/defcon-16/dc16-presentations/brossard/defcon-16-brossard-wp.pdf</a></p>
+<p>[Miller BH 2011] Battery Firmware Hacking, <a href="https://media.blackhat.com/bh-us-11/Miller/BH_US_11_Miller_Battery_Firmware_Public_Slides.pdf" target="_blank">https://media.blackhat.com/bh-us-11/Miller/BH_US_11_Miller_Battery_Firmware_Public_Slides.pdf</a></p>
+<p>[Duflot 2006] Using CPU System Management Mode to Circumvent Operating System Security Function, <a href="https://www.researchgate.net/publication/241643659_Using_CPU_System_Management_Mode_to_Circumvent_Operating_System_Security_Functions" target="_blank">https://www.researchgate.net/publication/241643659_Using_CPU_System_Management_Mode_to_Circumvent_Operating_System_Security_Functions</a></p>
+<p>[CIH 1998] CIH, <a href="https://en.wikipedia.org/wiki/CIH_(computer_virus" target="_blank">https://en.wikipedia.org/wiki/CIH_(computer_virus)</a>)</p>
+<p>[Sun 2007] BIOS Boot Hijacking, <a href="http://powerofcommunity.net/poc2007/sunbing.pdf" target="_blank">http://powerofcommunity.net/poc2007/sunbing.pdf</a></p>
+<p>[Ermolov 2016] Safeguarding Rootkits: Intel Boot Guard, <a href="https://github.com/flothrone/bootguard/blob/master/Intel%20BootGuard%20final.pdf" target="_blank">https://github.com/flothrone/bootguard/blob/master/Intel%20BootGuard%20final.pdf</a></p>
+<p>[Ermolov DC 2017] Safeguarding Rootkits: Intel Boot Guard (part2),<a href="https://github.com/flothrone/bootguard/blob/master/Intel%20BG%20part2.pdf" target="_blank">https://github.com/flothrone/bootguard/blob/master/Intel%20BG%20part2.pdf</a></p>
+<p>[Matrosov BH 2017] Betraying the BIOS, <a href="https://www.blackhat.com/docs/us-17/wednesday/us-17-Matrosov-Betraying-The-BIOS-Where-The-Guardians-Of-The-BIOS-Are-Failing.pdf" target="_blank">https://</a><a href="https://www.blackhat.com/docs/us-17/wednesday/us-17-Matrosov-Betraying-The-BIOS-Where-The-Guardians-Of-The-BIOS-Are-Failing.pdf" target="_blank">www.blackhat.com/docs/us-17/wednesday/us-17-Matrosov-Betraying-The-BIOS-Where-The-Guardians-Of-The-BIOS-Are-Failing.pdf</a></p>
+<p>[Matrosov BH 2019] Modern Secure Boot Attacks,<a href="http://i.blackhat.com/asia-19/Fri-March-29/bh-asia-Matrosov-Modern-Secure-Boot-Attacks.pdf" target="_blank">http://i.blackhat.com/asia-19/Fri-March-29/bh-asia-Matrosov-Modern-Secure-Boot-Attacks.pdf</a></p>
+<p>[Han BH 2018] I don&#x2019;t want to sleep tonight &#x2013; Subverting Intel TXT with S3 Sleep, <a href="https://i.blackhat.com/briefings/asia/2018/asia-18-Seunghun-I_Dont_Want_to_Sleep_Tonight_Subverting_Intel_TXT_with_S3_Sleep.pdf" target="_blank">https://i.blackhat.com/briefings/asia/2018/asia-18-Seunghun-I_Dont_Want_to_Sleep_Tonight_Subverting_Intel_TXT_with_S3_Sleep.pdf</a></p>
+<p>[Han BH 2019] Finally I can sleep tonight &#x2013; catching sleep mode vulnerabilities of the TPM with the napper, <a href="http://i.blackhat.com/asia-19/Thu-March-28/bh-asia-Seunghun-Finally-I-Can-Sleep-Tonight-Catching-Sleep-Mode-Vulnerabilities-of-the-TPM-with-the-Napper.pdf" target="_blank">http</a><a href="http://i.blackhat.com/asia-19/Thu-March-28/bh-asia-Seunghun-Finally-I-Can-Sleep-Tonight-Catching-Sleep-Mode-Vulnerabilities-of-the-TPM-with-the-Napper.pdf" target="_blank">://</a><a href="http://i.blackhat.com/asia-19/Thu-March-28/bh-asia-Seunghun-Finally-I-Can-Sleep-Tonight-Catching-Sleep-Mode-Vulnerabilities-of-the-TPM-with-the-Napper.pdf" target="_blank">i.blackhat.com/asia-19/Thu-March-28/bh-asia-Seunghun-Finally-I-Can-Sleep-Tonight-Catching-Sleep-Mode-Vulnerabilities-of-the-TPM-with-the-Napper.pdf</a></p>
+<p>[Chen BH 2009] Reversing and exploiting an Apple firmware update, <a href="https://www.blackhat.com/presentations/bh-usa-09/CHEN/BHUSA09-Chen-RevAppleFirm-SLIDES.pdf" target="_blank">https://</a><a href="https://www.blackhat.com/presentations/bh-usa-09/CHEN/BHUSA09-Chen-RevAppleFirm-SLIDES.pdf" target="_blank">www.blackhat.com/presentations/bh-usa-09/CHEN/BHUSA09-Chen-RevAppleFirm-SLIDES.pdf</a></p>
+<p>[Weinmann 2010] The hidden nemesis,<a href="https://media.ccc.de/v/27c3-4174-en-the_hidden_nemesis/related" target="_blank">https://media.ccc.de/v/27c3-4174-en-the_hidden_nemesis/related</a></p>
+<p>[Cui BH 2011] Print me if you dare,<a href="https://academiccommons.columbia.edu/doi/10.7916/D8QJ7RG3" target="_blank">https://academiccommons.columbia.edu/doi/10.7916/D8QJ7RG3</a></p>
+<p>[Domas BH 2018] God Mode Unlocked Hardware Backdoors in X86 CPUs, <a href="http://i.blackhat.com/us-18/Thu-August-9/us-18-Domas-God-Mode-Unlocked-Hardware-Backdoors-In-x86-CPUs.pdf" target="_blank">http://i.blackhat.com/us-18/Thu-August-9/us-18-Domas-God-Mode-Unlocked-Hardware-Backdoors-In-x86-CPUs.pdf</a></p>
+<p>Authors</p>
+<p><strong>Jiewen Yao</strong> (jiewen.yao@intel.com) is a Principal Engineer with Intel Architecture, Graphic and Software Group at Intel Corporation. He is security architect in EDK II BIOS. Jiewen is member of UEFI Security Sub-team and PI Security Sub-team in the UEFI Forum.</p>
+<p><strong>Chris Wu</strong> (chris.wu@intel.com) is a validation leader with Intel Architecture, Graphic and Software Group at Intel Corporation.</p>
+<p><strong>Vincent J. Zimmer</strong> (vincent.zimmer@intel.com) is a Senior Principal Engineer with Intel Architecture, Graphic and Software Group at Intel Corporation. Vincent chairs the UEFI Security and Network Sub-teams in the UEFI Forum.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Code Review Guide</div>
+        <div style="text-align:right">Revision 01.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="code_review_guidelines_for_boot_firmware/summary.html" class="navigation navigation-prev " aria-label="Previous page: Summary">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="references.html#books-and-papers" class="navigation navigation-next " aria-label="Next page: Books and Papers ">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"References","level":"1.5","depth":1,"next":{"title":"Books and Papers ","level":"1.5.1","depth":2,"anchor":"#books-and-papers","path":"references.md","ref":"references.md#books-and-papers","articles":[]},"previous":{"title":"Summary","level":"1.4.10","depth":2,"path":"code_review_guidelines_for_boot_firmware/summary.md","ref":"code_review_guidelines_for_boot_firmware/summary.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Secure Code Review Guide","version":"Revision 01.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"references.md","mtime":"2020-12-01T06:54:07.709Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T06:54:41.063Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

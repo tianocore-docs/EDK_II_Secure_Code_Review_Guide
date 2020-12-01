@@ -1,0 +1,553 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Hardware Input · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="secret_handling.html" />
+    
+    
+    <link rel="prev" href="race_condition.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    EDK II Secure Code Review Guide 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../executive_summary.html">
+            
+                <a href="../executive_summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../general_guidelines_for_secure_code_review.html">
+            
+                <a href="../general_guidelines_for_secure_code_review.html">
+            
+                    
+                    General Guidelines for Secure Code Review
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Code Review Guidelines for Boot Firmware
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="external_input.html">
+            
+                <a href="external_input.html">
+            
+                    
+                    External Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="race_condition.html">
+            
+                <a href="race_condition.html">
+            
+                    
+                    Race Condition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="hardware_input.html">
+            
+                <a href="hardware_input.html">
+            
+                    
+                    Hardware Input
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="secret_handling.html">
+            
+                <a href="secret_handling.html">
+            
+                    
+                    Secret Handling
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="register_lock.html">
+            
+                <a href="register_lock.html">
+            
+                    
+                    Register Lock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="secure_configuration.html">
+            
+                <a href="secure_configuration.html">
+            
+                    
+                    Secure Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="replayrollback.html">
+            
+                <a href="replayrollback.html">
+            
+                    
+                    Replay/Rollback
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="cryptography.html">
+            
+                <a href="cryptography.html">
+            
+                    
+                    Cryptography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="other.html">
+            
+                <a href="other.html">
+            
+                    
+                    Other
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="summary.html">
+            
+                <a href="summary.html">
+            
+                    
+                    Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../references.html">
+            
+                <a href="../references.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../references.html">
+            
+                <a href="../references.html#books-and-papers">
+            
+                    
+                    Books and Papers 
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../references.html">
+            
+                <a href="../references.html#web">
+            
+                    
+                    Web
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Hardware Input</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Code Review Guide</div>
+        <div style="text-align:right">Revision 01.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  hardware-input.md for EDK II Secure Code Review Guide
+
+  Copyright (c) 2019, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h2 id="hardware-input">Hardware Input </h2>
+<p>Hardware input is a special class of external input. If an attacker controls hardware, the input from hardware is considered to be untrusted. This includes, but is not limited to, Memory Mapped Input/Output (MMIO), cache, Direct Memory Access (DMA), Universal Serial Bus (USB) descriptors, and Bluetooth Low Energy (BLE) advertisement data.</p>
+<p><strong>Previous Vulnerabilities:</strong></p>
+<h3 id="mmio-bar-overlap">MMIO BAR Overlap </h3>
+<p>In <a href="https://invisiblethingslab.com/resources/bh08/part2-full.pdf" target="_blank">BlackHat 2008</a>, Invisible Things Lab demonstrated how to program the remap Base Address Register (BAR) to make the remap memory overlap with VMM or SMRAM, thus allowing for subsequent modification of the VMM or SMRAM contents.</p>
+<pre><code>pci_write_word (dev, TOUUD_OFFSET, (new_remap_limit+1)&amp;lt;&amp;lt;6);
+pci_write_word (dev, REMAP_BASE_OFFSET, new_remap_base);
+pci_write_word (dev, REMAP_LIMIT_OFFSET, new_remap_limit);
+</code></pre><p>In <a href="https://invisiblethingslab.com/resources/bh09usa/Ring%20-3%20Rootkits.pdf" target="_blank">BlackHat 2009</a>, Invisible Tings Lab also found the remap register bar can make the remap memory overlap with Management Engine (ME) RAM, thus allowing for a modification of the contents in ME firmware.</p>
+<p>To mitigate this class of attack, verify register bars are properly locked</p>
+<h3 id="mmio-bar-access">MMIO BAR Access </h3>
+<p>In <a href="http://www.c7zero.info/stuff/REConBrussels2017_BARing_the_system.pdf" target="_blank">RECon 2017</a>, Intel disclosed the MMIO BAR access issue in SMM. The attacker may configure the MMIO BAR to make it overlap with SMRAM. After this, subsequent access to MMIO in SMM becomes accesses to SMRAM.
+See statements with <code>bar</code> assignment within <code>if</code> statement below.</p>
+<pre><code>
+static void mainboard_smi_brightness_down (void)
+{
+  u8 *bar;
+  if ((bar = (u8 *)pci_read_config32(PCI_DEV(1, 0, 0), 0x18))) {
+    printk(BIOS_DEBUG, &#x201C;bar: %08X, level %02X\n&#x201D;, (unsigned int)bar,
+    *(bar+LVTMA_BL_MOD_LEVEL) &amp;amp;= 0xf0;
+    if (*(bar+LVTMA_BL_MOD_LEVEL) &amp;gt; 0x10)
+      *(bar+LVTMA_BL_MOD_LEVEL) -= 0x10;
+  }
+}
+</code></pre><p>There are several ways for firmware to mitigate this class of attack. For example, SMM can verify the MMIO bar does not overlap with SMRAM or is not in DRAM before access. SMM can revert the MMIO bar value to the default setting, perform an operation, then restore it to the original value.</p>
+<p>Care must be taken when code checks the MMIO. In 2009, Invisible Things Lab showed an <a href="https://invisiblethingslab.com/resources/misc09/Another%20TXT%20Attack.pdf" target="_blank">incorrect check for MMIO BAR</a>. This code checks the Memory Controller Hub (MCH) BAR value, but only for the lower 32 bits. Since the MCH BAR is 36 bits, the attacker may configure the MCH BAR value above 4G and exploit ACM due to the error in validation. This can results in an improper setup for the Intel&#xAE; Virtualization Technology for Direct I/O (Intel&#xAE; VT-d) engine. 
+See the usage of <code>MCHBAR address</code> below</p>
+<pre><code>pusha
+mov eax, 0x48 ; MCHBAR address
+call pci_get_long
+and ebx, 0xfffffffe
+mov DWORD PTR es:MCHBAR, ebx
+cmp ebx, 0xfec04000
+ja continue
+mov al, 0x4
+mov ah, 0xc
+call sinit_error
+continue:
+or ebx, 0x1
+call pci_write_long
+popa
+ret
+</code></pre><h3 id="cache">Cache </h3>
+<p>In <a href="https://cansecwest.com/csw09/csw09-duflot.pdf" target="_blank">CanSecWest 2009</a>, Cache poisoning was used to attack SMRAM in 2009. The attacker modifies the Memory Type Range Register (MTRR) to make it overlap with SMRAM, then updates the SMRAM cache and triggers an SMI.</p>
+<p>Recent Intel processors have introduced the SMRAM Range Register (SMRR) to resist cache poison attack. SMRR must be setup for all logical processors. This prevents the MTRR overlap with SMRAM from taking effect.</p>
+<h3 id="dma">DMA </h3>
+<p>In <a href="https://media.blackhat.com/us-13/US-13-Sevinsky-Funderbolt-Adventures-in-Thunderbolt-DMA-Attacks-Slides.pdf" target="_blank">BlackHat 2013</a>, the NCC group demonstrated a DMA attack using Thunderbolt. In 2017, OS password theft was demonstrated using <a href="http://blog.frizk.net/2017/01/attacking-uefi-and-linux.html" target="_blank">PCIleech</a> hardware.</p>
+<p>DMA attacks can be mitigated by setting up the Input/Output Management Unit (IOMMU) to block DMA access to full system memory. In firmware, this can be achieved using the IOMMU or disabling the Peripheral Component Interconnection (PCI) Bus Master Enable (BME) bit. However, if an untrusted device driver requires PCI BME access, the IOMMU must be setup to accommodate the untrusted device.</p>
+<h3 id="usb">USB </h3>
+<p>Because attackers can create devices with bad USB descriptors, USB data is considered untrusted. Projects like <a href="http://goodfet.sourceforge.net/hardware/facedancer21/" target="_blank">Facedancer</a> are good examples of USB fuzzing tools. In <a href="https://www.blackhat.com/docs/eu-14/materials/eu-14-Schumilo-Dont-Trust-Your-USB-How-To-Find-Bugs-In-USB-Device-Drivers.pdf" target="_blank">BlackHat 2014</a>, a demo shows how to do fuzz for the USB device driver.</p>
+<p>USB firmware drivers must assume USB descriptors are untrustworthy and always verify before consumption. This policy should also be applied to other drivers that consume potentially untrustworthy data, such as Bluetooth device advertisement messages.</p>
+<h3 id="tpm-genie">TPM Genie </h3>
+<p>In 2018, the NCC group demonstrated that a <a href="https://github.com/nccgroup/TPMGenie/blob/master/docs/CanSecWest_2018_-_TPM_Genie_-_Jeremy_Boone.pdf" target="_blank">Trusted Platform Module (TPM) Genie</a> may cause memory corruption in different TPM stacks, including Linux, tboot, and UEFI. This is possible when data returned by the TPM is not validated by the TPM stack.  See the usage of <code>recd</code> in the statements below.</p>
+<pre><code>int tpm_get_random(u32 chip_num, u8 *out, size_t max) {
+  struct tpm_chip *chip;
+  struct tpm_cmd_t tpm_cmd;
+  u32 recd, num_bytes = min_t(u32, max, TPM_MAX_RNG_DATA);
+  ...
+  tpm_cmd.header.in = tpm_getrandom_header;
+  tpm_cmd.params.getrandom_in.num_bytes = cpu_to_be32(num_bytes);
+  err = tpm_transmit_cmd( chip, &amp;amp;tpm_cmd,
+  TPM_GETRANDOM_RESULT_SIZE + num_bytes );
+  ...
+  recd = be32_to_cpu(tpm_cmd.params.getrandom_out.rng_data_len);
+  memcpy(out, tpm_cmd.params.getrandom_out.rng_data, recd);
+  ...
+}
+</code></pre><p>As mitigation, the TPM driver must perform robust checks of the response buffer size.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">EDK II Secure Code Review Guide</div>
+        <div style="text-align:right">Revision 01.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="race_condition.html" class="navigation navigation-prev " aria-label="Previous page: Race Condition">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="secret_handling.html" class="navigation navigation-next " aria-label="Next page: Secret Handling">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Hardware Input","level":"1.4.3","depth":2,"next":{"title":"Secret Handling","level":"1.4.4","depth":2,"path":"code_review_guidelines_for_boot_firmware/secret_handling.md","ref":"code_review_guidelines_for_boot_firmware/secret_handling.md","articles":[]},"previous":{"title":"Race Condition","level":"1.4.2","depth":2,"path":"code_review_guidelines_for_boot_firmware/race_condition.md","ref":"code_review_guidelines_for_boot_firmware/race_condition.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"EDK II Secure Code Review Guide","version":"Revision 01.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"code_review_guidelines_for_boot_firmware/hardware_input.md","mtime":"2020-12-01T06:54:07.709Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-12-01T06:54:41.063Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
